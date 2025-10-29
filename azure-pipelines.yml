@@ -20,10 +20,7 @@ steps:
 
 - task: Docker@2
   inputs:
-    containerRegistry: 'dotnetmssqlpf0841s1v'
+    containerRegistry: 'dotnetmssqlpf0841s1'
     repository: 'dotnetsql'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: |
-      $(Build.BuildId)
-      latest
