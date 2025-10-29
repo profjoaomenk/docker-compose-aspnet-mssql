@@ -7,7 +7,10 @@ pool:
 steps:
 - task: Docker@2
   inputs:
-    containerRegistry: 'dotnetmssqlpf0841s1'
+    containerRegistry: 'dotnetmssqlpf0841r1'
     repository: 'dotnetsql'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+    tags: |
+      $(Build.BuildId)
+      latest
